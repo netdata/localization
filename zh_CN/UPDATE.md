@@ -11,7 +11,7 @@
 
 ### 手动更新
 
-安装程序 `netdata-installer.sh` 会生成 `netdata-updater.sh` 脚本在你下载Netdata的目录中
+脚本 `netdata-installer.sh` 会生成一个 `netdata-updater.sh` 脚本在你下载Netdata的目录中
 你可以使用这一个脚本来更新Netdata，他将使用与安装程序相同的选项
 您只需要运行它，他将会自动下载并安装最新版的Netdata，同时，你还可以将这一个脚本放置在Cronjob中以定期更新Netdata
 
