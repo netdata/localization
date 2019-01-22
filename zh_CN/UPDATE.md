@@ -11,9 +11,8 @@
 
 ### 手动更新
 
-当你安装时，脚本 `netdata-installer.sh` 会在你下载目录中生成一个 `netdata-updater.sh` 
-你可以使用这一脚本来更新Netdata，他将使用与安装脚本相同的选项
-您只需要运行它，他将会自动下载并安装最新版的Netdata，同时，你还可以将这一个脚本放置在Cronjob中以定期更新Netdata
+当你安装时，脚本 `netdata-installer.sh` 会在你下载目录中生成一个 `netdata-updater.sh` ,你可以使用这一脚本来更新Netdata，它将使用与安装脚本相同的选项
+您只需要运行它，他便会自动下载并安装最新版的Netdata，同时，你还可以将这一个脚本放置在Cronjob中以定期自动更新Netdata
 
 ```sh
 #转到Git的下载目录
