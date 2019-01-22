@@ -33,7 +33,7 @@ cd /path/to/git/downloaded/netdata
 #下载最新的版本
 git pull
 
-#这个命令将会重建，安装，并允许Netdata
+#这个命令将会重建，安装，并运行Netdata
 ./netdata-installer.sh
 ```
 
