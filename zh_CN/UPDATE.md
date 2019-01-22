@@ -54,7 +54,7 @@ crontab -e
 
 #在文件的末尾添加一个新的cron-job命令（如下）。它将在每天的06：00更新Netdata：
 #更新Netdata
-0 6 * * * /目录/to/git/downloaded/netdata/netdata-updater.sh
+0 6 * * * /path/to/git/downloaded/netdata/netdata-updater.sh
 ```
 
 ## 如果您使用二进制包安装
