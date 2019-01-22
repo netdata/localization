@@ -22,7 +22,7 @@ cd /path/to/git/downloaded/netdata
 ./netdata-updater.sh
 ```
 
-_Netdata将会用新的版本运行_
+_Netdata将会以新的版本运行_
 
 如果你没有这一个脚本(比如：你删除了Netdata的下载目录), 请按照 **[安装]** 说明进行操作。请放心，安装程序会保留您的配置。您也可以手动将Netdata更新到最新版本。请按照如下命令进行操作：
 
@@ -37,7 +37,7 @@ git pull
 ./netdata-installer.sh
 ```
 
-_Netdata将会用新的版本运行_
+_Netdata将会以新的版本运行_
 
 请注意，Netdata现在可能具有一些新功能，或者某些旧功能现在可能表现不同。所以在更新后要注意这些变化。
 
