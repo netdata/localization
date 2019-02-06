@@ -63,7 +63,7 @@ For automated installs, append a space + `--dont-wait` to the command line. You 
 
 </details>&nbsp;<br/>
 
-当你安装完成，请前往：[开始使用](../../docs/GettingStarted.md)
+当你安装完成，请前往：[开始使用](docs/GettingStarted.md)
 
 ---
 
@@ -127,13 +127,13 @@ sh /tmp/kickstart-static64.sh
 
 </details>&nbsp;<br/>
 
-当你安装完成，请前往：[开始使用](../../docs/GettingStarted.md)
+当你安装完成，请前往：[开始使用](docs/GettingStarted.md)
 
 ---
 
 ## 在Docker容器上运行Netdata
 
-你可以[在Docker上安装Netdata](../docker/#install-netdata-with-docker).
+你可以[在Docker上安装Netdata](docker/#install-netdata-with-docker).
 
 ---
 
@@ -388,7 +388,7 @@ rc-update add local
 
 1. 通过Synology用户界面创建一个用户组`netdata`。但请不要给它任何权限。
 2. 通过Synology用户界面创建用户`netdata`。但请让它无法访问任何内容和随机密码。请将此用户分配给`netdata`用户组。Netdata将会在运行时为这个用户提供帮助。
-3. 更改以下目录的所有权（执行以下命令），如[Netdata安全](../../docs/netdata-security.md#security-design)中所配置的那样：
+3. 更改以下目录的所有权（执行以下命令），如[Netdata安全](docs/netdata-security.md#security-design)中所配置的那样：
 
 ```
 $ chown -R root:netdata /opt/netdata/usr/share/netdata
