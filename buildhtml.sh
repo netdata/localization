@@ -8,7 +8,8 @@
 set -e
 
 echo "Cloning the netdata repo"
-git clone https://github.com/netdata/netdata.git netdata
+#git clone https://github.com/netdata/netdata.git netdata
+git clone https://github.com/cakrit/netdata.git -b localization netdata
 
 cd netdata
 
