@@ -8,12 +8,12 @@
 set -e
 
 echo "Cloning the netdata repo"
+rm -rf netdata
 #git clone https://github.com/netdata/netdata.git netdata
 git clone https://github.com/cakrit/netdata.git -b localization netdata
 
-cd netdata
-
 echo "Calling the netdata docs/generator/buildhtml.sh"
+cd netdata
 ./docs/generator/buildhtml.sh
 
 echo "HTML Documentation produced under netdata/generator/build"
