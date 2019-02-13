@@ -1,4 +1,4 @@
-## 卸载Netdata
+# 卸载Netdata
 
 Netdata包含了自动卸载程序，它可以把Netdata从您的服务器中的删除。其运行不需要其他的支持库。它仅需要“.environment”文件，这个文件是被安装程序创建的，它应该在${NETDATA_USER_CONFIG_DIR} 中(其默认位置应为： /etc/netdata/.environment)。此文件包含一些安装程序留下的参数，这些参数在卸载过程中是必需的。主要有两个参数：
 ```
