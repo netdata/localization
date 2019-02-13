@@ -2,6 +2,7 @@
 
 ![image8](https://cloud.githubusercontent.com/assets/2662304/14253735/536f4580-fa95-11e5-9f7b-99112b31a5d7.gif)
 
+**Warning** This page is outdated. Please refer to the English version and help provide an up to date translation.
 
 我们建议你使用最新版的Netdata，我们正在不断地完善它。
 
