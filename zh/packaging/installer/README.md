@@ -1,11 +1,11 @@
 # 安装Netdata
 
-Netdata是一个**服务器状态监控显示器**。它可以在所有的系统上安装和运行：**物理**和**虚拟**服务器，**Docker**，甚至是**物联网（IoT）**。
+Netdata是一个**服务器状态监控显示器**。它可以在所有的系统上安装和运行，包括**物理**和**虚拟**服务器，**Docker容器**，甚至是**物联网（IoT）**中。
 
 安装Netdata的最佳方法是脚本安装。我们的**自动安装程序**将安装任何需要的系统软件包，并在您的系统上编译Netdata。
 
 !!! 注意
-    您可以找到由第三方分发的Netdata软件安装包。在大多数情况下，这些安装包太旧或不完整。因此，我们强烈建议您按照本说明来安装Netdata。
+    您可以找到由第三方分发的Netdata软件安装包。但是在大多数情况下，这些安装包太旧或不完整。因此，我们强烈建议您按照本说明来安装Netdata。
      **我们正在努力为所有的Linux发行版提供Netdata的二进制包。** 敬请期待     
 
 1. [自动安装](#自动安装)，从源代码中安装， **这是默认的安装方法**
@@ -17,13 +17,13 @@ Netdata是一个**服务器状态监控显示器**。它可以在所有的系统
 7. [在FreeNAS Corral中启用](#freenas)
 8. [在macOS (OS X)上安装](#macos)
 
-另请参阅ASUSTOR NAS，OpenWRT，ReadyNAS等的Netdata软件包维护者列表（它在../maintainers）。
+另请参阅ASUSTOR NAS，OpenWRT，ReadyNAS等的Netdata软件包维护者列表（它应该在../maintainers）。
 
 ---
 
 ## 自动安装
 
-> 这种方法在**所有的Linux发行版上都是自动的**。 在首次安装Netdata之前，FreeBSD和MacOS系统需要做一些准备工作。有关详细信息，请查看[FreeBSD](#freebsd)和[MacOS](#mocos)部分。
+> 这种方法在**所有的Linux发行版上都是自动的**。 在首次安装Netdata之前，FreeBSD和MacOS系统需要提前做一些准备工作。有关详细信息，请查看[FreeBSD](#freebsd)和[MacOS](#mocos)部分。
 
 要从源代码中安装Netdata并使其自动保持最新，请运行以下命令：
 
@@ -31,7 +31,7 @@ Netdata是一个**服务器状态监控显示器**。它可以在所有的系统
 bash <(curl -Ss https://my-netdata.io/kickstart.sh)
 ```
 
-*（没用必要使用`sudo`这个命令头，它会根据需要自动执行）*
+*（无须使用`sudo`命令头，它会根据需要自动执行）*
 
 ![](https://registry.my-netdata.io/api/v1/badge.svg?chart=web_log_nginx.requests_per_url&options=unaligned&dimensions=kickstart&group=sum&after=-3600&label=last+hour&units=installations&value_color=orange&precision=0) ![](https://registry.my-netdata.io/api/v1/badge.svg?chart=web_log_nginx.requests_per_url&options=unaligned&dimensions=kickstart&group=sum&after=-86400&label=today&units=installations&precision=0)
 
@@ -357,7 +357,7 @@ apk add alpine-sdk bash curl zlib-dev util-linux-dev libmnl-dev gcc make git aut
 # 如果您打算运行node.js Netdata插件，请执行此命令，否则请跳过
 apk add nodejs
 
-# 下载Netdata（同时会创建netdata目录）
+# 下载Netdata（同时创建Netdata更目录）
 git clone https://github.com/netdata/netdata.git --depth=100
 cd netdata
 
@@ -374,7 +374,7 @@ chmod 755 /etc/local.d/netdata.start
 echo -e "#!/usr/bin/env bash\nkillall netdata" >/etc/local.d/netdata.stop
 chmod 755 /etc/local.d/netdata.stop
 
-# enable the local service to start automatically
+# 启用本地服务以自动启动
 rc-update add local
 ```
 
@@ -398,7 +398,7 @@ $ chown -R netdata:root /opt/netdata/var/log/netdata
 
 此外，从2018/06/24起，Netdata安装程序将无法识别DSM为一个操作系统，所以安装程序无法安装任何init脚本。因此，您必须手动执行这些操作：
 
-1. 将[文件](https://gist.github.com/oskapt/055d474d7bfef32c49469c1b53e8225f)添加到`/etc/rc.netdata`中。然后，用`chmod 0755 /etc/rc.netdata`设置其为可执行。
+1. 将[文件](https://gist.github.com/oskapt/055d474d7bfef32c49469c1b53e8225f)添加到`/etc/rc.netdata`中。然后用`chmod 0755 /etc/rc.netdata`命令给予它权限。
 2. 编辑`/etc/rc.local`并在末尾添加一行调用：`/etc/rc.netdata`，使其在启动时可以自动启动：
 
 ```
