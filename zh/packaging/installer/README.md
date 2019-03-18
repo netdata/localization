@@ -1,29 +1,29 @@
 # 安装Netdata
 
-Netdata是一个**服务器状态监控显示器**。它可以在所有的系统上安装和运行：**物理**和**虚拟**服务器，**Docker**，甚至是**物联网（IoT）**。
+Netdata是一个**服务器状态监控显示器**。它可以在所有的系统上安装和运行，包括**物理**和**虚拟**服务器，**Docker容器**，甚至是**物联网（IoT）**中。
 
-安装Netdata的最佳方法是直接从源代码安装。 我们的**自动安装程序**将安装任何需要的系统软件包，并在您的系统上编译Netdata。
+安装Netdata的最佳方法是脚本安装。我们的**自动安装程序**将安装任何需要的系统软件包，并在您的系统上编译Netdata。
 
 !!! 注意
-    您可以找到由第三方分发的Netdata软件安装包。 在大多数情况下，这些安装包太旧或不完整。因此，我们建议按照本说明来安装Netdata。
-     **我们正在努力为所有的Linux发行版提供Netdata的二进制包。**敬请期待...
+    您可以找到由第三方分发的Netdata软件安装包。但是在大多数情况下，这些安装包太旧或不完整。因此，我们强烈建议您按照本说明来安装Netdata。
+     **我们正在努力为所有的Linux发行版提供Netdata的二进制包。** 敬请期待     
 
 1. [自动安装](#自动安装)，从源代码中安装， **这是默认的安装方法**
 2. [在64位的Linux上安装预构建的静态二进制文件](#linux-64bit-pre-built-static-binary)
 3. [在Docker容器中运行Netdata](#run-netdata-in-a-docker-container)
-4. [一步一步地手动安装](#install-netdata-on-linux-manually)
+4. [手动安装](#install-netdata-on-linux-manually)
 5. [在FreeBSD系统上安装](#freebsd)
 6. [在pfSense系统上安装](#pfsense)
 7. [在FreeNAS Corral中启用](#freenas)
 8. [在macOS (OS X)上安装](#macos)
 
-另请参阅ASUSTOR NAS，OpenWRT，ReadyNAS等的Netdata软件包维护者列表（它在../maintainers）。
+另请参阅ASUSTOR NAS，OpenWRT，ReadyNAS等的Netdata软件包维护者列表（它应该在../maintainers）。
 
 ---
 
 ## 自动安装
 
-> 这种方法在**所有的Linux发行版上都是自动的**。 在首次安装Netdata之前，FreeBSD和MacOS系统需要做一些准备工作。有关详细信息，请查看[FreeBSD](#freebsd)和[MacOS](#mocos)部分。
+> 这种方法在**所有的Linux发行版上都是自动的**。 在首次安装Netdata之前，FreeBSD和MacOS系统需要提前做一些准备工作。有关详细信息，请查看[FreeBSD](#freebsd)和[MacOS](#mocos)部分。
 
 要从源代码中安装Netdata并使其自动保持最新，请运行以下命令：
 
@@ -31,7 +31,7 @@ Netdata是一个**服务器状态监控显示器**。它可以在所有的系统
 bash <(curl -Ss https://my-netdata.io/kickstart.sh)
 ```
 
-*（不需要`sudo`这个命令头，它会根据需要单独执行）*
+*（无须使用`sudo`命令头，它会根据需要自动执行）*
 
 ![](https://registry.my-netdata.io/api/v1/badge.svg?chart=web_log_nginx.requests_per_url&options=unaligned&dimensions=kickstart&group=sum&after=-3600&label=last+hour&units=installations&value_color=orange&precision=0) ![](https://registry.my-netdata.io/api/v1/badge.svg?chart=web_log_nginx.requests_per_url&options=unaligned&dimensions=kickstart&group=sum&after=-86400&label=today&units=installations&precision=0)
 
@@ -41,7 +41,7 @@ bash <(curl -Ss https://my-netdata.io/kickstart.sh)
 Verify the integrity of the script with this:
 
 ```bash
-[ "b4632ca6c651de0f667e6d4f6e1015fe" = "$(curl -Ss https://my-netdata.io/kickstart.sh | md5sum | cut -d ' ' -f 1)" ] && echo "OK, VALID" || echo "FAILED, INVALID"
+[ "fad7227872a0afd07b74ac8d23cef017" = "$(curl -Ss https://my-netdata.io/kickstart.sh | md5sum | cut -d ' ' -f 1)" ] && echo "OK, VALID" || echo "FAILED, INVALID"
 ```
 *It should print `OK, VALID` if the script is the one we ship.*
 
@@ -80,7 +80,7 @@ For automated installs, append a space + `--dont-wait` to the command line. You 
   bash <(curl -Ss https://my-netdata.io/kickstart-static64.sh)
 ```
 
-*(不需要`sudo`这个命令头，它会根据需要单独执行；如果服务器没有安装`bash`，请参阅下面的说明：如何在没有`bash`的情况下运行安装程序）*
+*(没用必要使用`sudo`这个命令头，它会根据需要自动执行；如果服务器没有安装`bash`，请参阅下面的说明：如何在没有`bash`的情况下运行安装程序）*
 
 ![](https://registry.my-netdata.io/api/v1/badge.svg?chart=web_log_nginx.requests_per_url&options=unaligned&dimensions=kickstart64&group=sum&after=-3600&label=last+hour&units=installations&value_color=orange&precision=0) ![](https://registry.my-netdata.io/api/v1/badge.svg?chart=web_log_nginx.requests_per_url&options=unaligned&dimensions=kickstart64&group=sum&after=-86400&label=today&units=installations&precision=0)
 
@@ -133,7 +133,7 @@ sh /tmp/kickstart-static64.sh
 
 ## 在Docker容器上运行Netdata
 
-你可以[在Docker上安装Netdata](docker/#install-netdata-with-docker).
+你可以[在Docker上安装Netdata](../docker/#install-netdata-with-docker).
 
 ---
 
@@ -234,16 +234,16 @@ Netdata插件和Netdata的其他一些方面可以在安装时启用或禁用（
 
 ```sh
 
-# 下载Netdata（同时会创建netdata目录）
+# 下载Netdata（同时创建netdata目录）
 git clone https://github.com/netdata/netdata.git --depth=100
 cd netdata
 
-# 运行具有root权限的脚本来编译，安装，并启动Netdata
+# 运行具有root权限的脚本来编译安装Netdata并启动它
 ./netdata-installer.sh
 
 ```
 
-* 如果您不想安装完成后马上启动Netdata，请添加`--dont-start-it`参数
+* 如果您不想安装完成后启动Netdata，请添加`--dont-start-it`参数
 
 * 如果您不想在默认目录中安装Netdata，请按照这样来输入命令：`./netdata-installer.sh --install /opt`。这条命令会把Netdata安装在`/opt/netdata`中。
 
@@ -357,7 +357,7 @@ apk add alpine-sdk bash curl zlib-dev util-linux-dev libmnl-dev gcc make git aut
 # 如果您打算运行node.js Netdata插件，请执行此命令，否则请跳过
 apk add nodejs
 
-# 下载Netdata（同时会创建netdata目录）
+# 下载Netdata（同时创建Netdata更目录）
 git clone https://github.com/netdata/netdata.git --depth=100
 cd netdata
 
@@ -374,7 +374,7 @@ chmod 755 /etc/local.d/netdata.start
 echo -e "#!/usr/bin/env bash\nkillall netdata" >/etc/local.d/netdata.stop
 chmod 755 /etc/local.d/netdata.stop
 
-# enable the local service to start automatically
+# 启用本地服务以自动启动
 rc-update add local
 ```
 
@@ -398,12 +398,13 @@ $ chown -R netdata:root /opt/netdata/var/log/netdata
 
 此外，从2018/06/24起，Netdata安装程序将无法识别DSM为一个操作系统，所以安装程序无法安装任何init脚本。因此，您必须手动执行这些操作：
 
-1. 将[文件](https://gist.github.com/oskapt/055d474d7bfef32c49469c1b53e8225f)添加到`/etc/rc.netdata`中。然后，用`chmod 0755 /etc/rc.netdata`设置其为可执行。
+1. 将[文件](https://gist.github.com/oskapt/055d474d7bfef32c49469c1b53e8225f)添加到`/etc/rc.netdata`中。然后用`chmod 0755 /etc/rc.netdata`命令给予它权限。
 2. 编辑`/etc/rc.local`并在末尾添加一行调用：`/etc/rc.netdata`，使其在启动时可以自动启动：
 
 ```
 # 使Netdata在开机时自动启动
 [ -x /etc/rc.netdata ] && /etc/rc.netdata start
 ```
+译者注：请以英语原版为准
 
 [![analytics](https://www.google-analytics.com/collect?v=1&aip=1&t=pageview&_s=1&ds=github&dr=https%3A%2F%2Fgithub.com%2Fnetdata%2Fnetdata&dl=https%3A%2F%2Fmy-netdata.io%2Fgithub%2Finstaller%2FREADME&_u=MAC~&cid=5792dfd7-8dc4-476b-af31-da2fdb9f93d2&tid=UA-64295674-3)]()
