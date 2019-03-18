@@ -31,7 +31,7 @@ server {
 }
 ```
 
-### 作为已有虚拟主机的子文件夹
+### 作为已有虚拟主机的一个子文件夹
 
 ```
 upstream netdata {
@@ -199,6 +199,6 @@ Nginx记录访问信息，Netdata也记录它们。您可以通过设置来防�
 ```
 
 如果你看到类似上面的内容，则SELinux阻止了Nginx连接到后端服务器。
-要解决这个问题，只需要执行命令：`setsebool -P httpd_can_network_connect true`。
+要解决这个问题，只需要执行命令：`setsebool -P httpd_can_network_connect true`即可。
 
 [![analytics](https://www.google-analytics.com/collect?v=1&aip=1&t=pageview&_s=1&ds=github&dr=https%3A%2F%2Fgithub.com%2Fnetdata%2Fnetdata&dl=https%3A%2F%2Fmy-netdata.io%2Fgithub%2Fdocs%2FRunning-behind-nginx&_u=MAC~&cid=5792dfd7-8dc4-476b-af31-da2fdb9f93d2&tid=UA-64295674-3)]()
