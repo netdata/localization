@@ -3,6 +3,7 @@
 要通过Nginx访问Netdata，请使用以下配置文件：
 
 ### 作为一个虚拟主机
+### netdata via nginx
 
 ```
 upstream backend {
