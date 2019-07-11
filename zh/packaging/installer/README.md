@@ -235,6 +235,7 @@ Netdata插件和Netdata的其他一些方面可以在安装时启用或禁用（
 ---
 
 ### 安装Netdata
+### Install Netdata
 
 运行以下命令来安装并运行Netdata：
 
