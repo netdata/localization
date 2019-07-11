@@ -8,6 +8,8 @@ Netdata是一个**服务器状态监控显示器**。它可以在所有的系统
     您可以找到由第三方分发的Netdata软件安装包。但是在大多数情况下，这些安装包太旧或不完整。因此，我们强烈建议您按照本说明来安装Netdata。
      **我们正在努力为所有的Linux发行版提供Netdata的二进制包。** 敬请期待     
 
+## Installation
+
 1. [自动安装](#自动安装)，从源代码中安装， **这是默认的安装方法**
 2. [在64位的Linux上安装预构建的静态二进制文件](#linux-64bit-pre-built-static-binary)
 3. [在Docker容器中运行Netdata](#run-netdata-in-a-docker-container)
@@ -23,7 +25,7 @@ Netdata是一个**服务器状态监控显示器**。它可以在所有的系统
 
 ## 自动安装
 
-> 这种方法在**所有的Linux发行版上都是自动的**。 在首次安装Netdata之前，FreeBSD和MacOS系统需要提前做一些准备工作。有关详细信息，请查看[FreeBSD](#freebsd)和[MacOS](#mocos)部分。
+> 这种方法在**所有的Linux发行版上都是自动的**。 在首次安装Netdata之前，FreeBSD和MacOS系统需要提前做一些准备工作。有关详细信息，请查看[FreeBSD](#freebsd)和[MacOS](#macos)部分。
 
 要从源代码中安装Netdata并使其自动保持最新，请运行以下命令：
 
@@ -68,6 +70,7 @@ For automated installs, append a space + `--dont-wait` to the command line. You 
 ---
 
 ## 使用Linux 64的预构建静态二进制文件安装
+## Linux 64bit pre-built static binary
 
 您可以在任何Intel/AMD平台上的64位Linux系统上使用预编译静态二进制文件安装Netdata
 （即使是那些没有包管理器的系统，也可以使用这一方法来安装，如CoreOS，CirrOS，busybox等）。
@@ -133,12 +136,14 @@ sh /tmp/kickstart-static64.sh
 ---
 
 ## 在Docker容器上运行Netdata
+## Run netdata in a docker container
 
 你可以[在Docker上安装Netdata](../docker/#install-netdata-with-docker).
 
 ---
 
 ## 在Linux系统中手动安装Netdata
+## Install netdata on Linux manually
 
 要安装最新的Netdata git版本，请按照以下两个步骤操作：
 
