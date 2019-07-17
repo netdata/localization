@@ -18,6 +18,8 @@ Netdata是一个**服务器状态监控显示器**。它可以在所有的系统
 6. [在pfSense系统上安装](#pfsense)
 7. [在FreeNAS Corral中启用](#freenas)
 8. [在macOS (OS X)上安装](#macos)
+9. [Install on a Kubernetes cluster](https://github.com/netdata/helmchart#netdata-helm-chart-for-kubernetes-deployments)
+10. [Install using binary packages](#binary-packages)
 
 另请参阅ASUSTOR NAS，OpenWRT，ReadyNAS等的Netdata软件包维护者列表（它应该在../maintainers）。
 
