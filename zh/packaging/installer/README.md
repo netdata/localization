@@ -18,6 +18,8 @@ Netdata是一个**服务器状态监控显示器**。它可以在所有的系统
 6. [在pfSense系统上安装](#pfsense)
 7. [在FreeNAS Corral中启用](#freenas)
 8. [在macOS (OS X)上安装](#macos)
+9. [Install on a Kubernetes cluster](https://github.com/netdata/helmchart#netdata-helm-chart-for-kubernetes-deployments)
+10. [Install using binary packages](#binary-packages)
 
 另请参阅ASUSTOR NAS，OpenWRT，ReadyNAS等的Netdata软件包维护者列表（它应该在../maintainers）。
 
@@ -414,6 +416,26 @@ $ chown -R netdata:root /opt/netdata/var/log/netdata
 [ -x /etc/rc.netdata ] && /etc/rc.netdata start
 ```
 译者注：请以英语原版为准
+
+
+## Binary Packages
+![](https://raw.githubusercontent.com/netdata/netdata/master/web/gui/images/packaging-beta-tag.svg?sanitize=true)
+
+We provide our own flavour of binary packages for the most common operating systems that comply with .RPM and .DEB packaging formats.
+
+We have currently released packages following the .RPM format with version [1.16.0](https://github.com/netdata/netdata/releases/tag/v1.16.0).
+We have planned to release packages following the .DEB format with version [1.17.0](https://github.com/netdata/netdata/releases/tag/v1.17.0).
+Early adopters may experiment with our .DEB formatted packages using our nightly releases. Our current packaging infrastructure provider is [Package Cloud](https://packagecloud.io).
+
+Netdata is committed to support installation of our solution to all operating systems. This is a constant battle for Netdata, as we strive to automate and make things easier for our users. For the operating system support matrix, please visit our [distributions](../../packaging/DISTRIBUTIONS.md) support page.
+
+We provide two separate repositories, one for our stable releases and one for our nightly releases.
+
+1. Stable releases: Our stable production releases are hosted in [netdata/netdata](https://packagecloud.io/netdata/netdata) repository of package cloud
+2. Nightly releases: Our latest releases are hosted in [netdata/netdata-edge](https://packagecloud.io/netdata/netdata-edge) repository of package cloud
+
+Visit the repository pages and follow the quick set-up instructions to get started.
+
 
 ## Nightly vs. stable releases
 
