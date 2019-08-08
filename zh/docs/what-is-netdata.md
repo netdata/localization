@@ -1,4 +1,4 @@
-# What is Netdata? 
+# Netdata概述
 
 [![Build Status](https://travis-ci.com/netdata/netdata.svg?branch=master)](https://travis-ci.com/netdata/netdata) [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/2231/badge)](https://bestpractices.coreinfrastructure.org/projects/2231) [![License: GPL v3+](https://img.shields.io/badge/License-GPL%20v3%2B-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) [![analytics](https://www.google-analytics.com/collect?v=1&aip=1&t=pageview&_s=1&ds=github&dr=https%3A%2F%2Fgithub.com%2Fnetdata%2Fnetdata&dl=https%3A%2F%2Fmy-netdata.io%2Fgithub%2Freadme&_u=MAC~&cid=5792dfd7-8dc4-476b-af31-da2fdb9f93d2&tid=UA-64295674-3)]()
 
@@ -6,13 +6,13 @@
 
 ---
 
-**Netdata** is **distributed, real-time, performance and health monitoring for systems and applications**. It is a highly optimized monitoring agent you install on all your systems and containers.
+**Netdata** 是一个用于**检测系统及应用性能和健康状况**的监控工具，有**分布式**、**实时性**等特点，经过了高度优化，并可安装到各种系统和容器之上。
 
-Netdata provides **unparalleled insights**, **in real-time**, of everything happening on the systems it runs (including web servers, databases, applications), using **highly interactive web dashboards**.  It can run autonomously, without any third party components, or it can be integrated to existing monitoring tool chains (Prometheus, Graphite, OpenTSDB, Kafka, Grafana, etc).
+Netdata可以**实时且无与伦比地洞察**系统内运行的所有程序的运行状况，包括网络服务器、数据库、应用程序等。它既可以独立运行而不依靠其他第三方组件，也可以整合到现有的监控工具链之中，如Prometheus，Graphite，OpenTSDB，Kafka，Grafana等。
 
-_Netdata is **fast** and **efficient**, designed to permanently run on all systems (**physical** & **virtual** servers, **containers**, **IoT** devices), without disrupting their core function._
+_Netdata的设计宗旨在于**快速性**和**高效性**，要保证它能够永久性地在所有系统上运行——包括**物理**及**虚拟**服务器、**容器**、**物联网**设备等，同时要避免所在系统的核心功能受到它的阻碍。_
 
-Netdata is **free, open-source software** and it currently runs on **Linux**, **FreeBSD**, and **MacOS**.
+Netdata是**免费的开源软件**，目前支持的系统包括**Linux**，**FreeBSD**和**MacOS**。
 
 ---
 
