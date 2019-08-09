@@ -16,36 +16,35 @@ Netdata是**免费的开源软件**，目前支持的系统包括**Linux**，**F
 
 ---
 
-## How it looks
+## 用户界面
 
-The following animated image, shows the top part of a typical Netdata dashboard.
+下面的GIF动图是一个Netdata控制板界面的示例。
 
 ![peek 2018-11-11 02-40](https://user-images.githubusercontent.com/2662304/48307727-9175c800-e55b-11e8-92d8-a581d60a4889.gif)
 
-*A typical Netdata dashboard, in 1:1 timing. Charts can be panned by dragging them, zoomed in/out with `SHIFT` + `mouse wheel`, an area can be selected for zoom-in with `SHIFT` + `mouse selection`. Netdata is highly interactive and **real-time**, optimized to get the work done!*
+*上图为以正常速度运行的Netdata控制板示例。用户可以通过拖动来平移图表，也可以按住`SHIFT`键后利用鼠标滚轮来对图表进行缩放；如需放大图表上某一特定区域，则可按住`SHIFT`键后用鼠标选出该区域。Netdata具有高度可互动性和**实时性**，专为完成工作而优化！*
 
-> *We have a few online demos to experience it live: [https://www.netdata.cloud](https://www.netdata.cloud/#live-demo)*
+> *对Netdata用户体验有兴趣者请参见我们网站上的在线演示：[https://www.netdata.cloud](https://www.netdata.cloud/#live-demo)*
 
-## User base
+## 用户群
 
-Netdata is used by hundreds of thousands of users all over the world.
-Check our [GitHub watchers list](https://github.com/netdata/netdata/watchers).
-You will find people working for **Amazon**, **Atos**, **Baidu**, **Cisco Systems**, **Citrix**, **Deutsche Telekom**, **DigitalOcean**,
-**Elastic**, **EPAM Systems**, **Ericsson**, **Google**, **Groupon**, **Hortonworks**, **HP**, **Huawei**,
-**IBM**, **Microsoft**, **NewRelic**, **Nvidia**, **Red Hat**, **SAP**, **Selectel**, **TicketMaster**,
-**Vimeo**, and many more!
+Netdata的用户来自世界各地，有成千上万之众。
+具体请查看我们在[Github上的观察者名单](https://github.com/netdata/netdata/watchers)。
+这些人来自不同的企业及组织，包括**亚马逊**、**源讯**、**百度**、**思科**、**思杰**、**德国电信**、**爱立信**、**谷歌**、**惠普**、**华为**、**微软**、**英伟达**，以及**DigitalOcean**，**Elastic**，**EPAM Systems**，**Groupon**，**Hortonworks**，**IBM**，**NewRelic**，**Red Hat**，**SAP**，**Selectel**，**TicketMaster**，**Vimeo**等众多企业。
 
-### Docker pulls
-We provide docker images for the most common architectures. These are statistics reported by docker hub:
+### Docker镜像
+
+我们对多数架构都提供了对应的Docker镜像，以下是来自Docker Hub仓库的统计数据：
 
 [![netdata/netdata (official)](https://img.shields.io/docker/pulls/netdata/netdata.svg?label=netdata/netdata+%28official%29)](https://hub.docker.com/r/netdata/netdata/) [![firehol/netdata (deprecated)](https://img.shields.io/docker/pulls/firehol/netdata.svg?label=firehol/netdata+%28deprecated%29)](https://hub.docker.com/r/firehol/netdata/) [![titpetric/netdata (donated)](https://img.shields.io/docker/pulls/titpetric/netdata.svg?label=titpetric/netdata+%28third+party%29)](https://hub.docker.com/r/titpetric/netdata/)
 
-### Registry
-When you install multiple Netdata, they are integrated into **one distributed application**, via a [Netdata registry](../registry/#registry). This is a web browser feature and it allows us to count the number of unique users and unique Netdata servers installed. The following information comes from the global public Netdata registry we run:
+### 注册站
+
+当你安装了多个Netdata程序的时候，它们会被[Netdata注册站](../registry/#registry)整合为一个**分布式应用**。注册站是网页浏览器上的功能，可以让我们对用户及安装的Netdata服务器进行计数。下列数据来自我们运行的全球公共Netdata注册站：
 
 [![User Base](https://registry.my-netdata.io/api/v1/badge.svg?chart=netdata.registry_entries&dimensions=persons&label=user%20base&units=M&value_color=blue&precision=2&divide=1000000&v43)](https://registry.my-netdata.io/#menu_netdata_submenu_registry) [![Monitored Servers](https://registry.my-netdata.io/api/v1/badge.svg?chart=netdata.registry_entries&dimensions=machines&label=servers%20monitored&units=k&divide=1000&value_color=orange&precision=2&v43)](https://registry.my-netdata.io/#menu_netdata_submenu_registry) [![Sessions Served](https://registry.my-netdata.io/api/v1/badge.svg?chart=netdata.registry_sessions&label=sessions%20served&units=M&value_color=yellowgreen&precision=2&divide=1000000&v43)](https://registry.my-netdata.io/#menu_netdata_submenu_registry)
 
-*in the last 24 hours:*<br/> [![New Users Today](https://registry.my-netdata.io/api/v1/badge.svg?chart=netdata.registry_entries&dimensions=persons&after=-86400&options=unaligned&group=incremental-sum&label=new%20users%20today&units=null&value_color=blue&precision=0&v42)](https://registry.my-netdata.io/#menu_netdata_submenu_registry) [![New Machines Today](https://registry.my-netdata.io/api/v1/badge.svg?chart=netdata.registry_entries&dimensions=machines&group=incremental-sum&after=-86400&options=unaligned&label=servers%20added%20today&units=null&value_color=orange&precision=0&v42)](https://registry.my-netdata.io/#menu_netdata_submenu_registry) [![Sessions Today](https://registry.my-netdata.io/api/v1/badge.svg?chart=netdata.registry_sessions&after=-86400&group=incremental-sum&options=unaligned&label=sessions%20served%20today&units=null&value_color=yellowgreen&precision=0&v42)](https://registry.my-netdata.io/#menu_netdata_submenu_registry)
+*过去24小时内的数据:*<br/> [![New Users Today](https://registry.my-netdata.io/api/v1/badge.svg?chart=netdata.registry_entries&dimensions=persons&after=-86400&options=unaligned&group=incremental-sum&label=new%20users%20today&units=null&value_color=blue&precision=0&v42)](https://registry.my-netdata.io/#menu_netdata_submenu_registry) [![New Machines Today](https://registry.my-netdata.io/api/v1/badge.svg?chart=netdata.registry_entries&dimensions=machines&group=incremental-sum&after=-86400&options=unaligned&label=servers%20added%20today&units=null&value_color=orange&precision=0&v42)](https://registry.my-netdata.io/#menu_netdata_submenu_registry) [![Sessions Today](https://registry.my-netdata.io/api/v1/badge.svg?chart=netdata.registry_sessions&after=-86400&group=incremental-sum&options=unaligned&label=sessions%20served%20today&units=null&value_color=yellowgreen&precision=0&v42)](https://registry.my-netdata.io/#menu_netdata_submenu_registry)
 
 ## Why Netdata
 
