@@ -44,7 +44,8 @@ Netdata的用户来自世界各地，有成千上万之众。
 
 [![User Base](https://registry.my-netdata.io/api/v1/badge.svg?chart=netdata.registry_entries&dimensions=persons&label=user%20base&units=M&value_color=blue&precision=2&divide=1000000&v43)](https://registry.my-netdata.io/#menu_netdata_submenu_registry) [![Monitored Servers](https://registry.my-netdata.io/api/v1/badge.svg?chart=netdata.registry_entries&dimensions=machines&label=servers%20monitored&units=k&divide=1000&value_color=orange&precision=2&v43)](https://registry.my-netdata.io/#menu_netdata_submenu_registry) [![Sessions Served](https://registry.my-netdata.io/api/v1/badge.svg?chart=netdata.registry_sessions&label=sessions%20served&units=M&value_color=yellowgreen&precision=2&divide=1000000&v43)](https://registry.my-netdata.io/#menu_netdata_submenu_registry)
 
-*过去24小时内的数据:*<br/> [![New Users Today](https://registry.my-netdata.io/api/v1/badge.svg?chart=netdata.registry_entries&dimensions=persons&after=-86400&options=unaligned&group=incremental-sum&label=new%20users%20today&units=null&value_color=blue&precision=0&v42)](https://registry.my-netdata.io/#menu_netdata_submenu_registry) [![New Machines Today](https://registry.my-netdata.io/api/v1/badge.svg?chart=netdata.registry_entries&dimensions=machines&group=incremental-sum&after=-86400&options=unaligned&label=servers%20added%20today&units=null&value_color=orange&precision=0&v42)](https://registry.my-netdata.io/#menu_netdata_submenu_registry) [![Sessions Today](https://registry.my-netdata.io/api/v1/badge.svg?chart=netdata.registry_sessions&after=-86400&group=incremental-sum&options=unaligned&label=sessions%20served%20today&units=null&value_color=yellowgreen&precision=0&v42)](https://registry.my-netdata.io/#menu_netdata_submenu_registry)
+*过去24小时内的数据:*\
+[![New Users Today](https://registry.my-netdata.io/api/v1/badge.svg?chart=netdata.registry_entries&dimensions=persons&after=-86400&options=unaligned&group=incremental-sum&label=new%20users%20today&units=null&value_color=blue&precision=0&v42)](https://registry.my-netdata.io/#menu_netdata_submenu_registry) [![New Machines Today](https://registry.my-netdata.io/api/v1/badge.svg?chart=netdata.registry_entries&dimensions=machines&group=incremental-sum&after=-86400&options=unaligned&label=servers%20added%20today&units=null&value_color=orange&precision=0&v42)](https://registry.my-netdata.io/#menu_netdata_submenu_registry) [![Sessions Today](https://registry.my-netdata.io/api/v1/badge.svg?chart=netdata.registry_sessions&after=-86400&group=incremental-sum&options=unaligned&label=sessions%20served%20today&units=null&value_color=yellowgreen&precision=0&v42)](https://registry.my-netdata.io/#menu_netdata_submenu_registry)
 
 ## 为什么要选择Netdata
 
@@ -76,32 +77,30 @@ Netdata是**免费**的**开源**软件，具有**高速性**、**易用性**、
 
 Netdata的设计团队拥有**系统管理**、**运维（DevOps）**及**开发**的背景，其设计宗旨在与解决性能问题，而不仅仅是让性能指标可视化。
 
-## How it works
+## 运作流程
 
-Netdata is a highly efficient, highly modular, metrics management engine. Its lockless design makes it ideal for concurrent operations on the metrics.
+Netdata是一个高效率、高模块化的指标管理引擎，它的无锁设计使其成为对性能指标进行并发操作的理想工具。
 
 ![image](https://user-images.githubusercontent.com/2662304/48323827-b4c17580-e636-11e8-842c-0ee72fcb4115.png)
 
-This is how it works:
+以下是其运作流程:
 
-Function|Description|Documentation
+功能|概述|文档
 :---:|:---|:---:
-**Collect**|Multiple independent data collection workers are collecting metrics from their sources using the optimal protocol for each application and push the metrics to the database. Each data collection worker has lockless write access to the metrics it collects.|[`collectors`](../collectors/#data-collection-plugins)
-**Store**|Metrics are stored in RAM in a round robin database (ring buffer), using a custom made floating point number for minimal footprint.|[`database`](../database/#database)
-**Check**|A lockless independent watchdog is evaluating **health checks** on the collected metrics, triggers alarms, maintains a health transaction log and dispatches alarm notifications.|[`health`](../health/#health-monitoring)
-**Stream**|An lockless independent worker is streaming metrics, in full detail and in real-time, to remote Netdata servers, as soon as they are collected.|[`streaming`](../streaming/#streaming-and-replication)
-**Archive**|A lockless independent worker is down-sampling the metrics and pushes them to **backend** time-series databases.|[`backends`](../backends/)
-**Query**|Multiple independent workers are attached to the [internal web server](../web/server/#web-server), servicing API requests, including [data queries](../web/api/queries/#database-queries).|[`web/api`](../web/api/#api)
+**收集**|性能指标由多个独立的计算节点来平行处理，它们在各自的数据源上会利用对每个程序最优的协议来收集并推送性能指标数据到底层数据库。每个数据收集节点对其所收集的性能指标数据拥有无锁的写入权限。|[`收集器`](../collectors/#data-collection-plugins)
+**存储**|性能指标数据会以圆形队列形式存储在主存之中，形成一个轮询调度型数据库。为减小内存占用量，数据会以一种自定义的浮点数形式进行存储。|[`数据库`](../database/#database)
+**检查**|一个独立且无锁的“监控员”会对性能指标数据进行**健康检查**，同时负责触发警报、记录有关性能健康状况的事务日志，以及配发报警通知等任务。|[`健康状况`](../health/#health-monitoring)
+**成流**|一个独立且无锁的计算节点会将收集上来的性能指标的详细信息实时地转为数据流并发送给Netdata的远程服务器。|[`数据流`](../streaming/#streaming-and-replication)
+**归档**|一个独立且无锁的计算节点会对性能指标数据进行下采样，并将其推送至**后端**时序数据库中。|[`后端`](../backends/)
+**查询**|[内部网络服务器](../web/server/#web-server)下属的多个独立计算节点会处理API请求，包括[数据查询请求](../web/api/queries/#database-queries)。|[`网络API`](../web/api/#api)
 
-The result is a highly efficient, low latency system, supporting multiple readers and one writer on each metric.
+这样我们就能得到一个高效率、低延迟的系统，以保证每项指标上有多个计算节点拥有读取权限，单个计算节点拥有写入权限。
 
-## Infographic
+## 信息图
 
-This is a high level overview of Netdata feature set and architecture.
-Click it to to interact with it (it has direct links to documentation).
+下图为Netdata功能及架构的概念图，你可以通过点击图片上不同区域来阅读相关文档。
 
 [![image](https://user-images.githubusercontent.com/43294513/60951037-8ba5d180-a2f8-11e9-906e-e27356f168bc.png)](https://my-netdata.io/infographic.html)
-
 
 ## Features
 
