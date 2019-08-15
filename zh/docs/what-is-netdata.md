@@ -6,7 +6,7 @@
 
 ---
 
-**Netdata** 是一个用于**检测系统及应用性能和健康状况**的监控工具，有**分布式**、**实时性**等特点，经过了高度优化，并可安装到各种系统和容器之上。
+**Netdata** 是一个用于**监测系统及应用性能和健康状况**的监控工具，有**分布式**、**实时性**等特点，经过了高度优化，并可安装到各种系统和容器之上。
 
 Netdata可以**实时且无与伦比地洞察**系统内运行的所有程序的运行状况，包括网络服务器、数据库、应用程序等。它既可以独立运行而不依靠其他第三方组件，也可以整合到现有的监控工具链之中，如Prometheus，Graphite，OpenTSDB，Kafka，Grafana等。
 
@@ -46,37 +46,35 @@ Netdata的用户来自世界各地，有成千上万之众。
 
 *过去24小时内的数据:*<br/> [![New Users Today](https://registry.my-netdata.io/api/v1/badge.svg?chart=netdata.registry_entries&dimensions=persons&after=-86400&options=unaligned&group=incremental-sum&label=new%20users%20today&units=null&value_color=blue&precision=0&v42)](https://registry.my-netdata.io/#menu_netdata_submenu_registry) [![New Machines Today](https://registry.my-netdata.io/api/v1/badge.svg?chart=netdata.registry_entries&dimensions=machines&group=incremental-sum&after=-86400&options=unaligned&label=servers%20added%20today&units=null&value_color=orange&precision=0&v42)](https://registry.my-netdata.io/#menu_netdata_submenu_registry) [![Sessions Today](https://registry.my-netdata.io/api/v1/badge.svg?chart=netdata.registry_sessions&after=-86400&group=incremental-sum&options=unaligned&label=sessions%20served%20today&units=null&value_color=yellowgreen&precision=0&v42)](https://registry.my-netdata.io/#menu_netdata_submenu_registry)
 
-## Why Netdata
+## 为什么要选择Netdata
 
-Netdata has a quite different approach to monitoring.
+对于系统监控，Netdata选择了一条不一样的道路。
 
-Netdata is a monitoring agent you install on all your systems. It is:
+Netdata能够安装到各种系统之上，并可以用作：
 
-- a **metrics collector** - for system and application metrics (including web servers, databases, containers, etc)
-- a **time-series database** - all stored in memory (does not touch the disks while it runs)
-- a **metrics visualizer** - super fast, interactive, modern, optimized for anomaly detection
-- an **alarms notification engine** - an advanced watchdog for detecting performance and availability issues
+- **指标收集器**： 可整理系统及应用程序（如网络服务器、数据库、容器等）的指标度量数据
+- **时间序列数据库**： 可将所有数据都存储在内存中（且不会在运行过程中进行磁盘读写）
+- **可视化工具**： 可实现快捷、可互动、现代化的异常检测
+- **预警装置**：可及时发现性能及可用性方面的问题
 
-All the above, are packaged together in a very flexible, extremely modular, distributed application.
+所有以上功能都整合在了这样一个高度灵活、模块化、分布式的应用之中。
 
-This is how Netdata compares to other monitoring solutions:
+下表显示了Netdata与其他系统监测工具的对比：
 
-Netdata|others (open-source and commercial)
+Netdata|其他工具（开源或商业软件）
 :---:|:---:
-**High resolution metrics** (1s granularity)|Low resolution metrics (10s granularity at best)
-Monitors everything, **thousands of metrics per node**|Monitor just a few metrics
-UI is super fast, optimized for **anomaly detection**|UI is good for just an abstract view
-**Meaningful presentation**, to help you understand the metrics|You have to know the metrics before you start
-Install and get results **immediately**|Long preparation is required to get any useful results
-Use it for **troubleshooting** performance problems|Use them to get *statistics of past performance*
-**Kills the console** for tracing performance issues|The console is always required for troubleshooting
-Requires **zero dedicated resources**|Require large dedicated resources
+**高精度度量**（可精确到1秒）|低精度度量（最多可精确到10秒）
+可监测一切，**每个节点上千个指标**|只能监测少数几个指标
+超高速的用户界面，专为**异常检测**而优化|抽象的用户界面
+利用**直观的展示方式**帮助你理解各项指标|需要你提前学习各项指标的含义
+安装完成**之刻**即为得到结果**之时**|得到结果前需要做耗时的准备工作
+可用于**排除故障**，以解决性能问题|只可用于*统计过去的性能表现*
+**无需控制界面**即可追踪性能表现|只有利用控制界面才能排查性能故障
+**无需专有资源**|需要大量专有资源
 
-Netdata is **open-source**, **free**, super **fast**, very **easy**, completely **open**, extremely **efficient**,
-**flexible** and integrate-able.
+Netdata是**免费**的**开源**软件，具有**高速性**、**易用性**、**公开性**、**灵活性**等优势，并可方便地整合到各种框架之中。
 
-It has been designed by **SysAdmins**, **DevOps** and **Developers** for troubleshooting performance problems,
-not just visualize metrics.
+Netdata的设计团队拥有**系统管理**、**运维（DevOps）**及**开发**的背景，其设计宗旨在与解决性能问题，而不仅仅是让性能指标可视化。
 
 ## How it works
 
