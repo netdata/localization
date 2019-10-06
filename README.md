@@ -24,11 +24,14 @@ If you already see your language in https://docs.netdata.cloud, you will notice 
 - Copy it to the exact same location under `netdata/localization/[abbreviation]`.
 - Translate it and create a PR.
 
+## Caution regarding header translations
 
+Headers in markdown documents have a dual use as a section description and a link to a specific part of the document. 
+When you translate a header, you will need to find where else in the documentation that header is referenced and change 
+that reference as well. 
+An alternative workaround to modifying all links to a section is to keep the original, English headers as well. 
+This will result in duplicate headings, one in English and one in your language, so it's not a proper solution. 
 
-
-
-
-
-
-Note that until travis CI is enabled for this project, users won't be able to see the produced HTML site until a build is triggered on the netdata/netdata project. 
+As soon as [the issue with the build process](https://github.com/netdata/localization/issues/17) is resolved, the check 
+for broken links will be done for you by the build process (`checklinks.sh`). 
+So you'll be able to easily find the additional files that need to be modified, in order to get a successful build.
