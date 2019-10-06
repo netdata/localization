@@ -13,7 +13,9 @@ For example, to provide a Chinese translation on how to update Netdata, the file
 
 When you do a pull request with your PR, you will see that a Netlify check is automatically executed for your language as well.  If you click on deploy preview, the HTML documentation at https://docs.netdata.cloud will also be available under `https://docs.netdata.cloud/[abbreviation]`, with only the files you provided translated. For the previous example, the translated page would be available at `https://docs.netdata.cloud/zh/packaging/installer/UPDATE.md`. 
 
-The generated documentation has a language switcher tool, which we will extend with your language, once your PR is successfully merged.
+The generated documentation has a language switcher tool, which we will extend with your language, once your PR is successfully merged. 
+You may submit a PR yourself, by adding [an option for your language](https://github.com/netdata/netdata/blob/master/docs/generator/custom/themes/material/partials/header.html#L95).   
+You can see an example in [PR 7004 of project netdata/netdata](https://github.com/netdata/netdata/pull/7004).
 
 ## Translate more documents
 
