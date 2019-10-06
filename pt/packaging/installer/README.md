@@ -25,6 +25,7 @@ Nota: A partir do Netdata v1.12, informaações anônimas de uso são coletadas 
 ---
 
 ## Instalação automática de uma linha
+## One-line installation
 
 ![](https://registry.my-netdata.io/api/v1/badge.svg?chart=web_log_nginx.requests_per_url&options=unaligned&dimensions=kickstart&group=sum&after=-3600&label=last+hour&units=installations&value_color=orange&precision=0) ![](https://registry.my-netdata.io/api/v1/badge.svg?chart=web_log_nginx.requests_per_url&options=unaligned&dimensions=kickstart&group=sum&after=-86400&label=today&units=installations&precision=0)
 
@@ -82,6 +83,7 @@ Uma vez que o Netdata está instalado, veja [Começando](../../docs/getting-star
 ---
 
 ## Binário estatico pré-construido para Linux 64bit
+## Linux 64bit pre-built static binary
 
 ![](https://registry.my-netdata.io/api/v1/badge.svg?chart=web_log_nginx.requests_per_url&options=unaligned&dimensions=kickstart64&group=sum&after=-3600&label=last+hour&units=installations&value_color=orange&precision=0) ![](https://registry.my-netdata.io/api/v1/badge.svg?chart=web_log_nginx.requests_per_url&options=unaligned&dimensions=kickstart64&group=sum&after=-86400&label=today&units=installations&precision=0)
 
@@ -154,12 +156,14 @@ Uma vez que o Netdata está instalado, veja [Começando](../../docs/getting-star
 ---
 
 ## Executando o Netdata em um container Docker
+## Run Netdata in a Docker container
 
 Você pode [Instalar o Netdata com Docker](../docker/#install-netdata-with-docker).
 
 ---
 
 ## Instalando o Netdata manualmente no Linux
+## Install Netdata on Linux manually
 
 Para instalar a ultima versão do Netdata do git, por favor, siga esses 2 passos:
 
@@ -174,6 +178,7 @@ Para instalar a ultima versão do Netdata do git, por favor, siga esses 2 passos
 ---
 
 ### Preparando o seu sistema
+### Prepare your system
 
 Tente nosso instalador experimental automático de pacotes necessários (não precisa ser root). Ele tentará encontrar os pacotes que devem ser instalados em seu sistema para construir e executar o Netdata. Ele suporta a maioria das distribuições Linux lançadas após 2010:
 
@@ -274,6 +279,7 @@ As engines de banco de dados do Netdata podem ser ativados quando os pacotes aba
 ---
 
 ### Instalando o Netdata
+### Install Netdata
 
 Siga os passos abaixo para instalar e executar o Netdata:
 
@@ -303,6 +309,7 @@ Para aplicar as mudanças realizadas, reinicie o Netdata.
 ---
 
 ### Pacotes Binários
+### Binary Packages
 
 ![](https://raw.githubusercontent.com/netdata/netdata/master/web/gui/images/packaging-beta-tag.svg?sanitize=true)
 
@@ -324,6 +331,7 @@ Visite as páginas dos repositórios e sigam as instruções de configuração r
 ---
 
 ## Outros Sistemas
+## Other Systems
 
 ##### FreeBSD
 
@@ -488,6 +496,7 @@ Além disso, a partir de 24/06/2018, o instalador do Netdata não reconhece o DS
 ```
 
 ## Lançamentos Noturnos vs. Estáveis
+## Nightly vs. stable releases
 
 A equipe do Netdata mantêm duas versões do agente do Netdata: **noturnos** and **estáveis**. Por padrão, os scripts de instalação do Netdata fornecerão atualizações **automáticas noturnas**, pois essa é a nossa configuração recomendada.
 
@@ -508,6 +517,7 @@ A equipe do Netdata mantêm duas versões do agente do Netdata: **noturnos** and
 -   Mantenha mais controle sobre a versão Netdata usada
 
 ## Instalações Offline
+## Offline installations
 
 Você pode instalar o Netdata em sistemas sem acesso à Internet, mas é necessário executar algumas etapas extras para fazê-lo funcionar.
 
@@ -570,6 +580,7 @@ bash kickstart-static64.sh --local-files /tmp/netdata-version-number-here.gz.run
 Agora que você terminou sua instalação offline, pode seguir para o nosso [guia de primeiros passos](../../docs/getting-started.md)!
 
 ## Atualizações automáticas
+## Automatic updates
 
 Por padrão, os scripts de instalação do Netdata permitem atualizações automáticas para os canais de versões noturnos e estáveis.
 
