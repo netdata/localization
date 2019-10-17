@@ -1,12 +1,13 @@
+# Uma estrela no Github é importante
 # A GitHub star is important
 
-**GitHub stars** permite o Netdata a expandir seu alcançe, sua comunidade, atraindo especialmente pessoas com habilidades dispostas a contribuir.
+**Estrela no Github** permite o Netdata a expandir seu alcance, sua comunidade, atraindo especialmente pessoas com habilidades dispostas a contribuir.
 
-Comparada com sua primeira versão, o Netdata é agora **duas vezes mais rápido**, tendo todos os seus bugs resolvidos e muito mais funcionalidades. Isso aconteceu porque muitas pessoas o acham útil, usam diariamente em casa e no trabalho, **confiam nele** e **contribuem para ele**.
+Comparada com sua primeira versão, o Netdata é agora **duas vezes mais rápido**, tendo todos os seus bugs resolvidos com muito mais funcionalidades. Isso aconteceu porque muitas pessoas o acham útil, usam diariamente em casa e no trabalho, **confiam nele** e **contribuem para ele**.
 
-**GitHub stars** também nos **motiva**. Elas afirmam que você acha nosso trabalho **útil**. Elas nos dão força para continuar, trabalhar **mais** para torná-lo ainda **melhor**.
+**Estrela no Github** também nos **motivam**. Elas afirmam que você acha nosso trabalho **útil**. Elas nos dão força para continuar, trabalhar **mais** para torná-lo ainda **melhor**.
 
-Então, dê ao Netdata uma **GitHub star**, no canto superior direito desta página.
+Então, dê ao Netdata uma **Estrela no Github**, no canto superior direito desta página.
 
 Muito obrigado!
 

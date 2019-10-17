@@ -1,6 +1,7 @@
+# Sites de demonstração
 # Demo sites
 
-As instalações de demonstrações ao-vivo estão disponíveis em **[https://www.netdata.cloud](https://www.netdata.cloud/#live-demo)**:
+As instalações de demonstrações ao vivo estão disponíveis em **[https://www.netdata.cloud](https://www.netdata.cloud/#live-demo)**:
 
 | Localização|URL da demonstração do Netdata|60 mins reqs|VM doada por|
 |:------:|:--------------:|:----------:|:------------|
@@ -15,6 +16,6 @@ As instalações de demonstrações ao-vivo estão disponíveis em **[https://ww
 | Singapura|**[singapore.my-netdata.io](https://singapore.my-netdata.io)**|[![Requisições Por Segundo](https://singapore.my-netdata.io/api/v1/badge.svg?chart=netdata.requests&dimensions=requests&after=-3600&options=unaligned&group=sum&label=reqs&units=empty&value_color=blue&precision=0&v42)](https://singapore.my-netdata.io)|[DigitalOcean.com](https://m.do.co/c/83dc9f941745)|
 | Toronto (Canada)|**[toronto.my-netdata.io](https://toronto.my-netdata.io)**|[![Requisições Por Segundo](https://toronto.my-netdata.io/api/v1/badge.svg?chart=netdata.requests&dimensions=requests&after=-3600&options=unaligned&group=sum&label=reqs&units=empty&value_color=blue&precision=0&v42)](https://toronto.my-netdata.io)|[DigitalOcean.com](https://m.do.co/c/83dc9f941745)|
 
-_Os painés do Netdata são amigáveis aos dispositivos móveis e ao toque._
+_Os painéis do Netdata são amigáveis aos dispositivos móveis e ao toque._
 
 [![analytics](https://www.google-analytics.com/collect?v=1&aip=1&t=pageview&_s=1&ds=github&dr=https%3A%2F%2Fgithub.com%2Fnetdata%2Fnetdata&dl=https%3A%2F%2Fmy-netdata.io%2Fgithub%2Fdocs%2FDemo-Sites&_u=MAC~&cid=5792dfd7-8dc4-476b-af31-da2fdb9f93d2&tid=UA-64295674-3)](<>)
