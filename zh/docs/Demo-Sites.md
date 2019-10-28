@@ -1,8 +1,8 @@
 # Netdata的示例网站
 
-Netdata的演示可以访问下列网站：**[https://my-netdata.io](https://my-netdata.io)**
+Netdata 的在线Demo：**[https://my-netdata.io](https://my-netdata.io)**
 
-位置 |  Netdata演示URL | 60分钟内的访问量 | VM捐赠者
+位置 |  Netdata演示URL | 1小时内的访问量 | VM捐赠者
 :-------:|:-----------------:|:----------:|:-------------
 英国伦敦|**[london.my-netdata.io](https://london.my-netdata.io)**<br/>（这是Netdata的**全局注册节点**，本演示中提供了**named**与**Mysql**的数据概览）|[![Requests Per Second](https://london.my-netdata.io/api/v1/badge.svg?chart=netdata.requests&dimensions=requests&after=-3600&options=unaligned&group=sum&label=reqs&units=empty&value_color=blue&precision=0&v42)](https://london.my-netdata.io)|[DigitalOcean.com](https://m.do.co/c/83dc9f941745)
 美国亚特兰大|**[cdn77.my-netdata.io](https://cdn77.my-netdata.io)**<br/>（本演示中提供了**named**与**Mysql**的数据概览)|[![Requests Per Second](https://cdn77.my-netdata.io/api/v1/badge.svg?chart=netdata.requests&dimensions=requests&after=-3600&options=unaligned&group=sum&label=reqs&units=empty&value_color=blue&precision=0&v42)](https://cdn77.my-netdata.io)|[CDN77.com](https://www.cdn77.com/)
