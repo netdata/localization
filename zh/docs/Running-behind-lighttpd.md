@@ -1,4 +1,4 @@
-＃通过lighttpd v1.4.x的Netdata
+＃通过lighttpd v1.4.x运行Netdata
 
 这是用于通过lighttpd 1.4.46及更高版本访问子URL中的Netdata的配置：
 
@@ -9,7 +9,7 @@ $HTTP["url"] =~ "^/netdata/" {
 }
 ```
 
-如果您使用的是较旧的lighttpd，则必须使用链条（例如波纹管），如[在此stackoverflow答案中所述](http://stackoverflow.com/questions/14536554/lighttpd-configuration-to-proxy-rewrite-from-one-domain-to-another)。
+如果你使用的是较旧的lighttpd，则必须使用链路（例如bellow），如[在stackoverflow解答中所述](http://stackoverflow.com/questions/14536554/lighttpd-configuration-to-proxy-rewrite-from-one-domain-to-another)。
 
 ```txt
 $HTTP["url"] =~ "^/netdata/" {
@@ -24,13 +24,13 @@ $SERVER["socket"] == ":19998" {
 
 ---
 
-如果服务器通过Web公开的唯一内容是Netdata（因此不需要重写子URL），那么您就可以逃脱
+如果服务器通过Web公开的唯一内容是Netdata（因此不需要重写子URL），那么你就可以不用写
 
 ```
 proxy.server  = ( "" => ( ( "host" => "127.0.0.1", "port" => 19999 )))
 ```
 
-但是，如果它是公开的，则可能需要在其上进行身份验证。 htdigest支持看起来像：
+但是，如果它是公开的，则可能需要在其上进行身份验证。 htdigest支持如下的配置：
 
 ```
 auth.backend = "htdigest"
@@ -56,7 +56,7 @@ enable web responses gzip compression = no
 
 ##限制直接访问Netdata
 
-您还需要指示Netdata仅监听`127.0.0.1`或`:: 1`。
+你还需要指示Netdata仅监听`127.0.0.1`或`:: 1`。
 
 要限制仅从本地主机访问Netdata，请将`/etc/netdata/netdata.conf`中的`bind socket to IP = 127.0.0.1`或`bind socket to IP = :: 1`设置。
 

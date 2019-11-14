@@ -1,13 +1,12 @@
-＃通过HAProxy进行Netdata
+＃通过HAProxy运行Netdata
 
 > HAProxy是一种免费，非常快速且可靠的解决方案，可提供高可用性，负载平衡，并代理基于TCP和HTTP的应用程序。它特别适合于流量很高的网站并为世界上访问量最大的国家提供支持。
 
-如果Netdata在运行HAProxy的主机上运行，​​而不是从端口号，域名连接到Netdata 
-可以指向HAProxy，并且HAProxy可以将连接重定向到Netdata端口。这可以使
-通过<https://example.com>或<https://example.com/netdata/>连接到Netdata，这比<http://example.com:19999>更好。
+如果 Netdata 在运行 HAProxy 的主机上运行，​​而不是从端口号，域名连接到 Netdata 
+可以指向 HAProxy，并且 HAProxy 可以将连接重定向到 Netdata 端口。这可以使
+通过<https://example.com>或<https://example.com/netdata/>连接到 Netdata ，这比<http://example.com:19999>更好。
 
-要将[HAProxy](https://github.com/haproxy/haproxy)的请求代理到Netdata， 
-可以使用以下配置：
+要将[HAProxy](https://github.com/haproxy/haproxy)的请求代理到 Netdata，可以使用以下配置：
 
 ##默认配置
 
@@ -20,7 +19,7 @@ defaults
 
 ##简单配置
 
-一个简单的示例，其中使用基本URL(例如<http://example.com>)而没有子路径：
+一个简单的示例，其中使用基本的URL(例如<http://example.com>)而没有子路径：
 
 ###前端
 
@@ -36,7 +35,7 @@ frontend http_frontend
 
 ###后端
 
-创建Netdata后端，该后端将向端口`19999`发送请求。
+创建 Netdata 后端，该后端将向端口`19999`发送请求。
 
 ```conf
 backend netdata_backend
@@ -51,7 +50,7 @@ backend netdata_backend
 
 ##配置子路径
 
-将基本URL与子路径`/ netdata /`结合使用的示例：
+将基本URL与子路径`/netdata/`结合使用的示例：
 
 ###前端
 
@@ -96,7 +95,7 @@ backend netdata_backend
 ##使用TLS通讯
 
 可以通过在前端添加端口443和证书来使用TLS。
-如果主机匹配example.com（用您的域替换），则此示例将仅使用Netdata。
+如果主机匹配example.com（用你的域替换），则此示例将仅使用Netdata。
 
 ###前端
 
@@ -167,7 +166,7 @@ userlist basic-auth-list
   user admin password passwordhere groups is-admin
 ```
 
-您可以使用`mkpassword`实用程序创建一个哈希密码。
+你可以使用`mkpassword`实用程序创建一个哈希密码。
 
 ```sh
  printf "passwordhere" | mkpasswd --stdin --method=sha-256
