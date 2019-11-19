@@ -136,7 +136,8 @@ sudo /etc/netdata/edit-config health_alarm_notify.conf
 -   使用[示例](../health/README.md#examples)编写你自己的健康警报。
 -   添加新的通知方法，例如[Slack](../health/notifications/slack/)。
 
-##更改Netdata存储指标的时间
+## Change how long Netdata stores metrics
+## 更改Netdata存储指标的时间
 
 默认情况下，Netdata使用自定义数据库，该数据库同时使用RAM和磁盘来存储指标。 最近的度量标准存储在系统的RAM中，以保持快速访问，而历史度量标准则“堆积”到磁盘上，以保持较低的RAM使用率。
 
@@ -149,7 +150,7 @@ sudo /etc/netdata/edit-config health_alarm_notify.conf
 -   了解有关[数据库引擎的内存要求](../database/engine/README.md#memory-requirements)的更多信息，以了解应承诺多少RAM或者磁盘空间来存储历史指标。
 -   阅读有关[循环数据库](../database/)的内存要求，或弄清楚您的系统是否启用了KSM，这可以[减少默认数据库的内存使用量](../database/README.md#ksm)的大约60％。
 
-##使用Netdata监视多个系统
+## 使用Netdata监视多个系统
 
 如果您在多个系统上安装了Netdata，则可以将它们全部显示在仪表板左上角的**我的节点**菜单中。
 
@@ -166,7 +167,8 @@ sudo /etc/netdata/edit-config health_alarm_notify.conf
 -   阅读有关[Netdata Cloud注册表的工作原理](../registry/)，以及它存储并发送到Web浏览器的数据类型的信息。
 -   熟悉[节点视图](../docs/netdata-cloud/nodes-view.md)
 
-##启动，停止和重新启动Netdata
+## Start, stop, and restart Netdata
+## 启动，停止和重新启动Netdata
 
 安装Netdata时，它被配置为在引导时启动，然后停止并重新启动/关闭。 您不需要手动启动或停止Netdata，但是您可能需要在某个时候重新启动Netdata。
 
