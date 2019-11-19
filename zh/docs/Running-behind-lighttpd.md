@@ -1,4 +1,5 @@
-＃通过lighttpd v1.4.x运行Netdata
+# ＃通过lighttpd v1.4.x运行Netdata
+# Netdata via lighttpd v1.4.x
 
 这是用于通过lighttpd 1.4.46及更高版本访问子URL中的Netdata的配置：
 
