@@ -1,5 +1,5 @@
-# ＃通过Caddy运行Netdata
 # Netdata via Caddy
+# ＃通过Caddy运行Netdata
 
 要通过[Caddy的代理](https://caddyserver.com/docs/proxy)运行Netdata，需要设置Caddyfile：
 
