@@ -68,7 +68,7 @@ For automated installs, append a space + `--dont-wait` to the command line. You 
 
 </details>&nbsp;<br/>
 
-当你安装完成，请前往：[开始使用](../../docs/GettingStarted.md)
+当你安装完成，请前往：[开始使用](../../docs/getting-started.md)
 
 ---
 
@@ -134,7 +134,7 @@ sh /tmp/kickstart-static64.sh
 
 </details>&nbsp;<br/>
 
-当你安装完成，请前往：[开始使用](../../docs/GettingStarted.md)
+当你安装完成，请前往：[开始使用](../../docs/getting-started.md)
 
 ---
 
