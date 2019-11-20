@@ -32,18 +32,18 @@ Netdata主要使用`netdata.conf`文件进行自定义配置。
 默认情况下，大多数选项都带有注释，因此你必须取消注释（删除`＃`），Netdata 才能识别你的
 更改。
 
-保存更改后，请[重新启动 Netdata](＃start-stop-and-restart-netdata)加载新配置。
+保存更改后，请[重新启动 Netdata](#start-stop-and-restart-netdata)加载新配置。
 
 **下一步是什么？**：
 
--   通过增加`历史记录`来[更改Netdata存储指标的时间](＃change-how-long-netdata-stores-metrics)选项或切换到数据库引擎。
+-   通过增加`历史记录`来[更改Netdata存储指标的时间](#change-how-long-netdata-stores-metrics)选项或切换到数据库引擎。
 -   将 Netdata 的仪表板移至[不同端口](https://docs.netdata.cloud/web/server/)或启用TLS / HTTPS加密。
 -   请参阅我们的[daemon配置文档](../daemon/config/)中的所有`netdata.conf`选项。
 -   运行自己的[注册表](../registry/README.md#run-your-own-registry)。
 
 ##从更多来源收集数据
 
-当Netdata启动时，它将自动检测数十个`数据源`，例如数据库服务器，Web服务器等。 要从刚刚安装的服务或应用程序中自动检测并收集指标，你需要[重新启动Netdata](＃start-stop-and-restart-netdata)。
+当Netdata启动时，它将自动检测数十个`数据源`，例如数据库服务器，Web服务器等。 要从刚刚安装的服务或应用程序中自动检测并收集指标，你需要[重新启动Netdata](#start-stop-and-restart-netdata)。
 
 >有一个例外：Netdata在主机上运行时（例如不在容器本身中运行），它将始终自动检测容器和虚拟机。
 
