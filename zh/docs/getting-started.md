@@ -133,7 +133,7 @@ sudo /etc/netdata/edit-config health_alarm_notify.conf
 
 **下一步是什么？**：
 
--   使用[示例](../health/REFERENCE.md#examples)编写你自己的健康警报。
+-   使用[示例](../health/REFERENCE.md)编写你自己的健康警报。
 -   添加新的通知方法，例如[Slack](../health/notifications/slack/)。
 
 ## Change how long Netdata stores metrics
