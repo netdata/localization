@@ -131,6 +131,7 @@ sudo /etc/netdata/edit-config health_alarm_notify.conf
 -   [Slack](../health/notifications/slack/)과 같은 새로운 알람 방법을 추가해보세요.
 
 ## Netdata가 측정치를 저장하는 기간을 변경
+## Change how long Netdata stores metrics
 
 Netedata는 RAM과 디스크를 모두 사용하는 커스텀 데이터베이스를 사용하여 측정치를 저장하도록 기본 값이 설정되어 있습니다. 최신의 측정치는 빠른 접근 속도를 위해 RAM에 저장되고 기록 측정치는 RAM 사용량을 낮추기 위해 디스크에 저장됩니다.
 
@@ -163,6 +164,7 @@ action](https://user-images.githubusercontent.com/1153921/64389938-9aa7b800-cff9
 -   Familiarize yourself with the [Nodes View](../docs/netdata-cloud/nodes-view.md)
 
 ## Netdata 시작, 정지, 재시작
+## Start, stop, and restart Netdata
 
 Netdata를 설치하면 기본적으로 부팅 시 Netdata가 시작되고, 시스템 종료시 중지, 재시작되도록 설정되어 있습니다. Netdata를 직접 시작하거나 중지할 필요가 없지만 Netdata를 재시작해야할 경우도 있습니다.
 
