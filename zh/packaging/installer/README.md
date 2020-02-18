@@ -26,7 +26,7 @@ Netdata是一个**服务器状态监控显示器**。它可以在所有的系统
 ---
 
 ## 自动安装
-## One line installation
+## Automatic one-line installation script
 
 > 这种方法在**所有的Linux发行版上都是自动的**。 在首次安装Netdata之前，FreeBSD和MacOS系统需要提前做一些准备工作。有关详细信息，请查看[FreeBSD](#freebsd)和[MacOS](#macos)部分。
 
