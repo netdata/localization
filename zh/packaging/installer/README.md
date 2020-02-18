@@ -462,7 +462,7 @@ The Netdata team maintains two releases of the Netdata agent: **nightly** and **
 
 By default, Netdata's installation scripts enable automatic updates for both nightly and stable release channels.
 
-If you would prefer to manually update your Netdata agent, you can disable automatic updates by using the `--no-updates` option when you install or update Netdata using the [one-line installation script](#one-line-installation).
+If you would prefer to manually update your Netdata agent, you can disable automatic updates by using the `--no-updates` option when you install or update Netdata using the [one-line installation script](#automatic-one-line-installation-script).
 
 ```bash
 bash <(curl -Ss https://my-netdata.io/kickstart.sh) --no-updates
